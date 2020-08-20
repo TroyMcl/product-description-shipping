@@ -12,16 +12,15 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
 app.get('/description', (req,res) => {
-  let id = req.query.prod_id;
-  id = Number(id);
+  let id = Number(req.query.prod_id);
   db.query(id,(err,data) => {
     if(err) {
       res.send(err)
     } else (
       res.send(data)
     )
-  })
-})
+  });
+});
 
 
-module.exports = app
+module.exports = app;

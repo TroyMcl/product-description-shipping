@@ -8,9 +8,10 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "server": "nodemon server/server.js",
+    "server:dev": "nodemon server/server.js",
+    "server:prod": "node server/server.js",
     "start": "webpack",
-    "build": "webpack -d --watch",
+    "build:dev": "webpack -d --watch",
     "seed": "node seed.js",
     "test": "jest --detectOpenHandles",
     "builds3": "NODE_ENV='production' grunt aws_s3:bundle"
@@ -23,14 +24,12 @@
     "mongodb": "^3.3.2",
     "mongoose": "^5.7.5",
     "node-fetch": "^2.6.0",
-    "nodemon": "^1.19.3",
     "path": "^0.12.7",
     "prop-types": "^15.7.2",
     "query-string": "^6.8.3",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-router-dom": "^5.1.2",
-    "sinon": "^7.5.0",
     "styled-components": "^4.4.0"
   },
   "devDependencies": {
@@ -51,6 +50,7 @@
     "grunt": "^1.0.4",
     "grunt-aws-s3": "^2.0.1",
     "jest": "^24.9.0",
+    "sinon": "^7.5.0",
     "superagent": "^5.1.0",
     "supertest": "^4.0.2",
     "webpack": "^4.41.0",
