@@ -20,7 +20,7 @@
 ## General Information
 > This repo is for the product description and shipping information section of an item page for an eBay clone website. This service is a full stack application, that can be combined with others in a reverse proxy to create a completed clone page. Emphasis was put on front end technologies with a light weight server and data set.
 
- > I built this application with two goals in mind. The first was to get a better understanding of how all of the systems work together in full stack development, and then take system from a dev environment to deployment. The second was to learn how services would be combined in the real world and the types of challenges that must be overcome to make all of the micro services work together.
+ > I built this application with two goals in mind. The first was to get a better understanding of how all of the systems work together in full stack development, and then take those systems from a dev environment to deployment. The second was to learn how Micro Services would be combined in the real world and the types of challenges that must be overcome to make several micro services render correctly with matching item data.
 
 ## Technologies
 Application was created with:
@@ -32,10 +32,12 @@ Application was created with:
 * Express
 * Mongodb
 * Mongoose
+
 Was deployed on AWS with:
 * AWS EC2
 * AWS S3 bucket for images
 * Docker
+
 Testing Suite:
 * Jest
 * Enzyme
@@ -43,7 +45,7 @@ Testing Suite:
 ## Requirements
 An `nvmrc` file is included  [nvm](https://github.com/creationix/nvm).
 - Node 6.13.0
-- Mongodb
+- Local install of Mongodb
 
 ## Images
 ![Item Description prod 1](./screenshots/desc1.png)
@@ -54,15 +56,15 @@ An `nvmrc` file is included  [nvm](https://github.com/creationix/nvm).
 ## Features
 * App utilized query params to sync product information with other micro service
 * Grunt adds Javascript bundle to AWS S3 bucket
-* Docker file for creating image of server and client code, docker-compose file to setup app with a database
-* Built a Jest test suite for testing React components and server routes
+* Set up to run on Docker, either a continer with only the server and client, or with docker-compose for running with a mongodb container.
+* Jest test suite for testing React components and server routes
 * After considering the trade offs, used Styled Components for ease of readability in the React code, and to apply styles based on state
 
 
 ## Development
 > Minor things that I would like to come back and work on:
 
-* Refactor theco server to rely on environment variables
+* Refactor the server to rely on environment variables
 * Reconfigure webpack to create a development bundle and a production bundle
 * Create a wait-for-it script for the docker compose file
 
@@ -78,4 +80,4 @@ From within the root directory:
 npm install
 npm run seed
 ```
-Add the query parameter prod_id=<integer> to URL to get app to render
+Add the query parameter prod_id set to an product number (prod_id=1), in the URL to get app to render
