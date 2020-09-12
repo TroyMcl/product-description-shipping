@@ -23,7 +23,7 @@
     "faker": "^4.1.0",
     "mongodb": "^3.3.2",
     "mongoose": "^5.7.5",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "path": "^0.12.7",
     "prop-types": "^15.7.2",
     "query-string": "^6.8.3",
